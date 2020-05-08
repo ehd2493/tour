@@ -203,7 +203,7 @@ letter-spacing: -1px;
 
 .row{max-width: 1050px; margin: 0 auto;
 }
-
+.openMOgnb{display:none}
 #wrap {position: relative;}
 
 #header{background: rgba(0,0,0,0.5); color: #fff;
