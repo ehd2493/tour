@@ -60,6 +60,40 @@
           border-right-color:transparent;
           position:absolute; left:50%; margin-left:-7px; }  
 
+/* 상담신청 및 NOTICE */
+.appbbs_area {
+  padding: 60px 0;
+}
+
+.appbbs_box .app_line{
+  float: left ; width: 66%;  padding: 45px 0;
+  text-align: center;
+  background: url(../img/bg_app.jpg) no-repeat;
+}
+
+.app_line a {display: inline-block;
+width: 42.4%;  height: 100px;
+line-height: 100px;
+padding-left: 75px;
+text-align: left;
+background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%;
+border: 2px solid #fff;
+color:  #fff;
+margin-right: 2%;
+font-size: 16px;
+}
+
+.app_line a+a {
+  margin-right: 0%;
+  background: url(../img/ico_phone.png) no-repeat 20px 50%;
+  border: 2px solid #fff;
+  padding-left: 85px;
+} 
+
+.bbs_line{
+  float: right; width: 30%;
+}
+
 }
 
 
@@ -171,7 +205,7 @@
     bottom:0; left:0;  width:100%;  }
   .quick_list   li {    text-align: center; float:left; width:33.33%;
     background: #282828;    font-size: 15px;    }
-.quick_list   li   a { display: block;   padding: 15px 0;  
+.quick_list   li   a { display: block;   padding: 20px 0;  
    border-top: 1px solid #4d4d4d;  
    border-left: 1px solid #4d4d4d;   }    
 .quick_list   li:nth-child(1)   a   { border-left:none }
@@ -181,5 +215,39 @@
 
   .depth1 > li:hover  .dep2box { display:none }
 
+/* 상담신청 및 NOTICE */
+.appbbs_area {
+  padding: 0px 0;
+}
+
+.appbbs_box .app_line{
+  float: none ; width: 100%;  padding: 45px 20px;
+  text-align: center;
+  background: url(../img/bg_app.jpg) no-repeat;
+  background-size: cover;
+}
+
+.app_line a {display: inline-block;
+width: 42.4%;  height: 100px;
+line-height: 100px;
+padding-left: 75px;
+text-align: left;
+background: rgba(0,0,0,0.3) url(../img/ico_katalk.png) no-repeat 20px 50%;
+border: 2px solid #fff;
+color:  #fff;
+margin-right: 0%;
+font-size: 0px;
+}
+
+.app_line a+a {
+  margin-right: 0%;
+  background: url(../img/ico_phone.png) no-repeat 20px 50%;
+  border: 2px solid #fff;
+  padding-left: 85px;
+} 
+
+.bbs_line{
+  float: none; width: 100%; padding: 20px;
+}
 
 } 
