@@ -71,7 +71,7 @@ width: 80%;
 padding: 8px 0;
 }
 
-.join_form input[type=text],
+.join_form    input[type=text],
 .join_form    input[type=password],
 .join_form    select,
 .join_form    textarea {
@@ -119,3 +119,12 @@ background:#555
     background: #f00;
 }
 
+.join_form .radio_area,
+.join_form .hobby_area {
+   height: 45px; line-height: 45px;
+}
+
+.join_form .radio_area label,
+.join_form .hobby_area label{
+   padding-right: 20px; color: #444; font-size: 15px;
+}
