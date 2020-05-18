@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+
 #container .join_tit {
     height: 445px;
     background: url(../img/img_top5.jpg) no-repeat center;
@@ -121,10 +123,32 @@ background:#555
 
 .join_form .radio_area,
 .join_form .hobby_area {
-   height: 45px; line-height: 45px;
+   height: 45px;
 }
 
-.join_form .radio_area label,
+.join_form .radio_area label {
+    padding-right: 20px; color: #444; font-size: 15px;
+    padding-left: 20px; display: inline-block;
+    height: 15px; margin-top: 15px;
+    background: url(../img/bg_radio.png) no-repeat 0 0;
+ }
+
+ .join_form .radio_area input[type='radio']:checked+label {
+    background: url(../img/bg_radio.png) no-repeat 0 -50px;
+ }
+ 
+
+
 .join_form .hobby_area label{
    padding-right: 20px; color: #444; font-size: 15px;
+   padding-left: 20px; display: inline-block;
+   background: url(../img/bg_checkbox.png) no-repeat 0 0;
+   background-size: 15px 30px;
+   height: 15px;
+}
+
+.join_form .hobby_area input[type='checkbox']:checked+label{
+   background-position:  0 -15px;
+   /*   background: url(../img/bg_checkbox.png) no-repeat 0 -15px;
+   background-size: 15px 30px; 이것도가능*/
 }
