@@ -241,9 +241,9 @@ background-size:contain 값으로 조절함
   text-align: left;
 }
 
-.depth1>li:hover .dep2box {
+/* .depth1>li:hover .dep2box {
   display: block
-}
+} */
 
 
 .depth2>li {
