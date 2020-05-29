@@ -443,6 +443,49 @@ background-size:contain 값으로 조절함
   display: inline-block;
 }
 
+.popupBox { display:none }
+.popupBox.on {
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  z-index:999999999999999
+}
+.popupBox.on  .inner {
+  position:absolute;
+  top:520px;
+  left:50%;
+  transform:translate(-50%);
+  background:#fff;
+  text-align:center;
+  padding:20px; 
+}
+.popupBox.on  h3 {
+  font-size:30px; 
+  font-weight:bold;
+  padding:20px  0px;
+}
+.popupBox.on  p {
+  font-size:20px; 
+  padding:20px  0px;
+  width:80%;
+  margin:0 auto;
+  line-height:1.5
+}
+.popupBox.on  button {
+  font-size:50px;
+  color:#fff;
+  position:absolute;
+  top:-45px; 
+  right:-45px; 
+  background:none;
+  border:none;
+}
+
+
 /* a href="#none , a href="javascript:;" 화면이 위로안올라가게하려면 사용*/
 
 .bgbox {
