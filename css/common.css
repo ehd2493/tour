@@ -332,9 +332,51 @@ background-size:contain 값으로 조절함
   top: 100px
 }
 
-.slide2,
+/* .slide2,
 .slide3 {
   display: none;
+} */
+
+.main_rolling_pc {
+  position: relative;
+}
+.marrow {
+  position: absolute; top: 50%;
+  transform: translateY(-50%),;
+  background: none;
+  border: none;
+  font-size: 80px;
+  color: #fff;
+}
+.prevArrow {
+  left: 20px; z-index: 9999999
+}
+.nextArrow{
+  right: 20px;
+}
+
+.slick-dots {
+  position: absolute; bottom: 20px; width: 100%;
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
+}
+.slick-dots li button{
+  width: 15px; height: 15px; background: #fff; border: none;
+  text-indent: -9999px; overflow: hidden; border-radius: 50%; margin:0 5px
+}
+.slick-dots li.slick-active button {
+  width: 40px; border-radius: 50px;
+}
+
+.plpa {
+  position: absolute; bottom: 18px;
+  background: none; border: none;
+  font-size: 15px;
+  color: #fff; right: 0; width: 50%;
+text-align: left; padding-left:60px;
+
 }
 
 /* 다시찾는 인기여행지 top3 */
