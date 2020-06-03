@@ -108,3 +108,24 @@ $("#header  .closeMOgnb").on("click", function(){
           prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
           nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
   })         
+
+  $(".plpa").toggle(
+        function(){
+                $(".visualRoll").slick("slickPause")
+                $(this).find("i").removeClass("fa-pause").addClass("fa-play")
+        },
+        function(){
+                $(".visualRoll").slick("slickPlay")
+                $(this).find("i").removeClass("fa-play").addClass("fa-pause")
+        }
+)
+
+// $(".plpa").on("click", function(){
+//         if(  $(this).find("i").hasClass("fa-pauce") ) {
+//                 $(".visualRoll").slick("slickPause")
+//                 $(this).find("i").removeClass("fa-pause").addClass("fa-play")
+//         }else{
+//               $(".visualRoll").slick("slickPlay")
+//               $(this).find("i").removeClass("fa-play").addClass("fa-pause")
+//         }
+// })
