@@ -638,12 +638,22 @@ text-align: left; padding-left:10px;
   padding: 60px 0;
 }
 
+.appbbs_box{
+  overflow: hidden;
+}
+
 .appbbs_box .app_line {
   float: left;
   width: 66%;
   padding: 45px 0;
   text-align: center;
   background: url(../img/bg_app.jpg) no-repeat;
+  -webkit-transform: translate3d(-200%, 0, 0);
+  transform: translate3d(-200%, 0, 0);
+}
+
+.appbbs_box.on .app_line {
+   animation: fadeInLeft 1s  both 0.5s
 }
 
 .app_line a {
@@ -670,6 +680,12 @@ text-align: left; padding-left:10px;
 .bbs_line {
   float: right;
   width: 30%;
+  -webkit-transform: translate3d(300%, 0, 0);
+  transform: translate3d(300%, 0, 0); 
+}
+
+.appbbs_box.on .bbs_line{
+  animation: fadeInRight 1s both 0.5s;
 }
 
 .bbs_line h3 {
