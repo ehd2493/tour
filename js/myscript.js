@@ -135,7 +135,9 @@ $(".multi_visual").slick({
         autoplaySpeed: 3000,          // 간격시간
         dots: true,                               // 동그라미 버튼, 기본값이 false로 설정
         speed: 600,                            // 슬라이드 동작하는데 걸리는 시간(생략가능)
-        slidesToShow: 4,                   // 보여지는 슬라이드 수(생략가능)
+        centerMode:true,                  // 좌우측에 다다음슬라이드가 살짝비치는것
+        centerPadding:"80px",         
+        slidesToShow: 3,                   // 보여지는 슬라이드 수(생략가능)
         slidesToScroll: 1,                   // 넘어가는 슬라이드 수(생략가능)
         pauseOnHover: true,          //  슬라이드 위에 마우스 over을할시 슬라이드 멈춤여부  false는 안멈춤(생략가능)
         pauseOnDotsHover: true,  //  동그라미 버튼 위에 마우스 over할시 멈춤여부(생략가능)
@@ -146,4 +148,12 @@ $(".multi_visual").slick({
         arrows: true,                         //  기본값은 true이며  슬라이드 좌우측 방향 버튼(생략가능)
         prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
         nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+        responsive:[{
+                breakpoint: 800,
+                settings:{
+                        centerMode:true,                  // 좌우측에 다다음슬라이드가 살짝비치는것
+                        centerPadding:"100px",         
+                        slidesToShow: 1,                   // 보여지는 슬라이드 수(생략가능)
+                }
+        }]
 })

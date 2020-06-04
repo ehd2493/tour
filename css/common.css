@@ -392,7 +392,7 @@ text-align: left; padding-left:10px;
 
 }
 .multi_rolling{
-  padding: 50px 0px;
+  padding: 50px 30px;
   position: relative;
 }
 .multi_rolling h2{
@@ -415,10 +415,10 @@ text-align: left; padding-left:10px;
   color: #999;
 } 
 .multi_rolling .prevArrow {
-  left: -40px; z-index: 9999999
+  left: -30px; z-index: 9999999
 }
 .multi_rolling .nextArrow{
-  right: -40px;
+  right: -30px;
 }
 
 .multi_rolling .slick-dots {
@@ -435,6 +435,24 @@ text-align: left; padding-left:10px;
 .multi_rolling .slick-dots li.slick-active button {
   background: #000;
 }
+
+
+.multi_rolling .slick-slide{/*슬릭슬라이더 안에 있는 모든슬라이드*/
+  opacity: 0.6;
+  transform: scale(0.85);
+  transition: all 0.5s;
+}
+
+.multi_rolling .slick-slide.slick-active{ /* 무대 공간에 보여지는슬라이드, slidesToShow */
+  opacity: 1;
+}
+
+.multi_rolling .slick-slide.slick-active.slick-current{/* 무대 중앙에 있는 슬라이드 하나 */
+  transform: scale(1);
+  /* opacity: 1; */
+}
+
+
 
 /* 다시찾는 인기여행지 top3 */
 .about_area h2 {
