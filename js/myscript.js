@@ -71,8 +71,10 @@ $("#header  .closeMOgnb").on("click", function(){
         $(this).parents("#header").removeClass("on")
   })
   
+  var lieq;   //전용변수
   $(".place_list > li > a").on("click", function(e){
           e.preventDefault();
+          lieq  =$(this).parent().index()
           var href = $(this).attr("href")
           var src = $(this).attr("data-src")
           var text = $(this).find("h3").text()
@@ -95,9 +97,48 @@ $("#header  .closeMOgnb").on("click", function(){
           $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
   })
   
-  $(".popupBox  button").on("click", function(){
+  $(".popupBox  button.close").on("click", function(){
           $(this).parents(".popupBox").removeClass("on")
   }) 
+
+  $(".popupBox  button.prev").on("click", function(){
+      --lieq;   //  순서  2, 1, 0, 2, 1, 0
+      if(lieq < 0 ){
+              lieq = 2;
+      }
+      var href = $(".place_list > li").eq(lieq).find("a").attr("href")
+      var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+      var text = $(".place_list > li").eq(lieq).find("a").find("h3").text()
+      var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+      var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+
+      $(".popupBox   .inner  h3").text(text)
+      $(".popupBox   .inner   p").text(info)
+      $(".popupBox   .inner   div  a").attr("href", href)
+      $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+
+  })
+
+  $(".popupBox  button.next").on("click", function(){
+        ++lieq;   //  순서  0, 1, 2, 0, 1, 2
+        if(lieq == $(".place_list >li").length ){
+                lieq = 0;
+        }
+        var href = $(".place_list > li").eq(lieq).find("a").attr("href")
+        var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+        var text = $(".place_list > li").eq(lieq).find("a").find("h3").text()
+        var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+        var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+  
+        $(".popupBox   .inner  h3").text(text)
+        $(".popupBox   .inner   p").text(info)
+        $(".popupBox   .inner   div  a").attr("href", href)
+        $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
+  
+    })
+
+
+
 
   $(".visualRoll").slick({
           autoplay: true,                        // 자동재생, 기본값이 false로 설정

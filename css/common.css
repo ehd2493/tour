@@ -367,8 +367,8 @@ animation:bounce  1s  both  0.5s;
 .main_rolling_pc .nextArrow{
   right: 20px;
 }
-
-.main_rolling_pc .slick-dots {
+/* 번호버튼 타입1*/
+/* .main_rolling_pc .slick-dots {
   position: absolute; bottom: 20px; width: calc(50% + 30px);
   text-align: right;
 }
@@ -381,13 +381,47 @@ animation:bounce  1s  both  0.5s;
 }
 .main_rolling_pc .slick-dots li.slick-active button {
   width: 40px; border-radius: 50px;
+} */
+
+
+/* 번호버튼  애니메이션 타입*/
+.main_rolling_pc .slick-dots {
+  position: absolute; bottom: 20px; width:60%;
+  text-align: right;
 }
+
+.main_rolling_pc .slick-dots li {
+  display: inline-block;
+  width: 114px;
+  height: 2px;
+  background: #999;
+  margin:0 5px;
+  position: relative;
+}
+
+.main_rolling_pc .slick-dots li button{
+  width: 0px; height: 2px; background: #fff; border: none;
+  text-indent: -9999px; overflow: hidden; border-radius: 1px; 
+  position: absolute; top: 0; left: 0;
+
+}
+.main_rolling_pc .slick-dots li.slick-active button {
+  animation: lineani 3s both;
+}
+
+@keyframes lineani{
+  0% {width: 0px;}
+  100% {width: 100%;}
+}
+
+
+
 
 .main_rolling_pc .plpa {
   position: absolute; bottom: 18px;
   background: none; border: none;
   font-size: 15px;
-  color: #fff; right: 0; width: calc(50% - 30px);
+  color: #fff; right: 0; width:40%;
 text-align: left; padding-left:10px;
 
 }
@@ -592,7 +626,7 @@ text-align: left; padding-left:10px;
   margin:0 auto;
   line-height:1.5
 }
-.popupBox.on  button {
+.popupBox.on  button.close {
   font-size:50px;
   color:#fff;
   position:absolute;
@@ -600,6 +634,22 @@ text-align: left; padding-left:10px;
   right:-45px; 
   background:none;
   border:none;
+}
+
+.popupBox.on button.arrow{
+  font-size: 80px;
+  color: #fff;
+  position: absolute; top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+
+.popupBox.on button.prev{
+  left: -80px;
+}
+.popupBox.on button.next{
+  right: -80px;
 }
 
 
