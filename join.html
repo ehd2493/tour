@@ -7,11 +7,13 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/rwd.css">
 	<link rel="stylesheet" href="css/join.css">
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/jquery-migrate-1.4.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<!--[if lte IE 9]>
 	<script src="js/html5shiv.js"></script>
 	<script src="js/prefixfree.min.js"></script>
@@ -136,6 +138,12 @@
                     <div class="app_content">
                         <input type="text" id="hp_lbl" placeholder='휴대폰"-"없이 숫자만 입력하세요' required>
                     </div>
+				</li>
+				<li class="cf">
+                    <label for="birthday" class="tit_lbl pilsoo_item">생년월일</label>
+                    <div class="app_content">
+                        <input type="text" id="birthday" name="birthday">
+                    </div>
                 </li>
 				<li class="cf">
 					<label  class="tit_lbl">성별</label>
@@ -149,6 +157,8 @@
 				<li class="cf">
 					<label  class="tit_lbl">취미</label>
 					<div class="app_content hobby_area">
+						<input type="checkbox" id="allchek" name="allchek">
+						<label for="allchek">전체선택</label>
 						<input type="checkbox" id="hobby1" name="hobby1">
 						<label for="hobby1">등산</label>
 						<input type="checkbox" id="hobby2" name="hobby2">
@@ -236,8 +246,24 @@ var maxlen = $("#query").attr("maxlength")
         var current = $(this).val().length
 		var remain = maxlen - current 
 		$(".app_content  p  span").text(remain) 
-		
 		})
+
+		$("#allchek").on("click", function(){
+		var bool =	$(this).prop("checked")
+		$(".hobby_area input[name^='hobby']").prop("checked", bool);
+		})
+        $("#birthday").datepicker({
+			  dateFormat:'yy-mm-dd', //날짜형식
+			  changeMonth:true,  //월 선택
+			  changeYear:true,  //연도선택
+			  yearRange:'1900:2020'  //연도범위
+		})
+		$.datepicker .setDefault({
+			dayNamesMin:['일','월','화','수','목','금','토'],
+			monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+		    showMonthAfterYear: true
+		})
+	
 	</script>
 </body>
 
